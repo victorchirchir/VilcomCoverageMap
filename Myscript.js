@@ -1,9 +1,6 @@
 var map=L.map('map').setView([-0.4564, 36.0763],6)
 
- var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-   maxZoom: 17,
-   attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-}).addTo(map);
+
 
 //setting coordinates to display when mouse hovers around
 map.on('mousemove',function(e){
@@ -115,12 +112,12 @@ var points = [Nairobi, NakuruPoint, Eldoret, Ongata_Rongai, Ruiru]
     attribution:
       'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
   }
-).addTo(map)
+)
 
 var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
-});
+}).addTo(map);
 
 var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     maxZoom: 20,
@@ -141,8 +138,8 @@ var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={
 
 //basemaps
 var baselayers={
-'OpenTopoMap':OpenTopoMap,
 'Google Street':googleStreets,
+'OpenTopoMap':OpenTopoMap,
 'Google Hybrid':googleHybrid,
 'Google Satelite':googleSat,
 'Google Terrain':googleTerrain
