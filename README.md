@@ -1,4 +1,4 @@
 # Nakuru_Geoportal
-A simple web geoportal for Nakuru County
+A simple web map showing internet coverage of vilcom internet
 
-Access the geoportal using this link https://victorchirchir.github.io/Nakuru_Geoportal/
+https://victorchirchir.github.io/VilcomCoverageMap/
